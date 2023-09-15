@@ -1,2 +1,2 @@
-# mpesa-integration-STK-push
+ mpesa-integration-STK-push
 
