@@ -17,7 +17,6 @@ app.use(cors());
 
 app.use("api", tokenRoute)
 
-
 app.post("/stk",  async (req, res)=>{
   const phone = req.body.phone.substring(1);
   const amount = req.body.amount;
