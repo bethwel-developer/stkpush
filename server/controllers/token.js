@@ -3,6 +3,7 @@ const router =require ("express").Router();
 
 //.env variables 
 
+
 //PORT = 9000
 //MPESA_PAYBILL= 
 //MPESA_PASSKEY = 
@@ -37,7 +38,6 @@ await axios.get(
 })
 
 }
-
 
 router.get("/token", createToken)
 
