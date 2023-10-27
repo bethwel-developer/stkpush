@@ -11,13 +11,13 @@ const router =require ("express").Router();
 //MPESA_SECRET_KEY =
 
 
-
-
 const createToken = async (req, res, next)=>{
 const secret =process.env.MPESA_SECRET_KEY;
 const consumer =process.env.MPESA_CONSUMER_KEY;
 const auth = new Buffer.from(`${consumer}:${secret}`).toString("base64");
 
+
+    
 await axios.get(
     
     "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials",
@@ -40,6 +40,8 @@ await axios.get(
 }
 
 router.get("/token", createToken)
+
+
 
 
 
