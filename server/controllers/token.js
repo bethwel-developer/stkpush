@@ -1,7 +1,7 @@
 const axios = require ("axios")
 const router =require ("express").Router();
 
-//.env variables 
+//.env  file variables 
 
 
 //PORT = 9000
