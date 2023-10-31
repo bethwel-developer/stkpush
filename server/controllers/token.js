@@ -9,11 +9,12 @@ const router =require ("express").Router();
 //MPESA_SECRET_KEY =
 
 const createToken = async (req, res, next)=>{
+    
 const secret =process.env.MPESA_SECRET_KEY;
 const consumer =process.env.MPESA_CONSUMER_KEY;
 const auth = new Buffer.from(`${consumer}:${secret}`).toString("base64");
 
-//generate access token code
+//generating access token code
     
 await axios.get(
     
