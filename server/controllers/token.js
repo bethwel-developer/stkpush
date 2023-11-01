@@ -1,7 +1,7 @@
 const axios = require ("axios")
 const router =require ("express").Router();
 
-//.env  file variables 
+//.env  files
 //PORT = 9000
 //MPESA_PAYBILL= 
 //MPESA_PASSKEY = 
@@ -12,6 +12,7 @@ const createToken = async (req, res, next)=>{
     
 const secret =process.env.MPESA_SECRET_KEY;
 const consumer =process.env.MPESA_CONSUMER_KEY;
+    //64 base encoding
 const auth = new Buffer.from(`${consumer}:${secret}`).toString("base64");
 
 //generating access token code
@@ -37,11 +38,6 @@ await axios.get(
 
 }
 
-
 router.get("/token", createToken)
-
-
-
-
 
 module.exports=router;
