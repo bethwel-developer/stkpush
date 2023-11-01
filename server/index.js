@@ -1,5 +1,4 @@
 const express = require("express");
-
 const app = express ();
 const cors = require ("cors")
 require("dotenv").config()
@@ -17,6 +16,7 @@ app.use(cors());
 
 app.use("api", tokenRoute)
 
+ //collecting entries
 app.post("/stk",  async (req, res)=>{
   const phone = req.body.phone.substring(1);
   const amount = req.body.amount;
