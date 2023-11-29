@@ -28,7 +28,6 @@ app.post("/stk",  async (req, res)=>{
  
   await axios.post(
     "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest",
-    
       {    
         BusinessShortCode:shortcode,    
         Password: password,    
