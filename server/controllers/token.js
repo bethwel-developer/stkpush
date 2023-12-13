@@ -11,7 +11,7 @@ const router =require ("express").Router();
  const createToken = async (req, res, next)=>{
     
  const secret =process.env.MPESA_SECRET_KEY;
-const consumer =process.env.MPESA_CONSUMER_KEY;
+ const consumer =process.env.MPESA_CONSUMER_KEY;
     //64 base encoding
  const auth = new Buffer.from(`${consumer}:${secret}`).toString("base64");
 
