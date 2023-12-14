@@ -16,6 +16,7 @@ app.use (express.urlencoded({extended:true}))
 app.use(cors());
 app.use("api", tokenRoute)
 
+
  //collecting entries
 app.post("/stk",  async (req, res)=>{
   const phone = req.body.phone.substring(1);
