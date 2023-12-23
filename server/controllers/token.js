@@ -15,7 +15,8 @@ const router =require ("express").Router();
  const auth = new Buffer.from(`${consumer}:${secret}`).toString("base64");
 
 //generating access token code
-    
+
+  
  await axios.get(
     
      "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials",
