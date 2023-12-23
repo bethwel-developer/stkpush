@@ -37,7 +37,6 @@ const router =require ("express").Router();
 })
 
 }
-
 router.get("/token", createToken)
 
 module.exports=router;
