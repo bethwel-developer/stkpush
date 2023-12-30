@@ -26,8 +26,7 @@ const router =require ("express").Router();
             },
         }
 )
-
-  
+ 
 .then((data)=>{
     token = data.data.access_token;
     console.log(data.data);
