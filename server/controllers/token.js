@@ -8,7 +8,8 @@ const axios = require ("axios")
 //MPESA_CONSUMER_KEY = 
 //MPESA_SECRET_KEY =
 
- const createToken = async (req, res, next)=>{   
+
+const createToken = async (req, res, next)=>{   
  const secret =process.env.MPESA_SECRET_KEY;
  const consumer =process.env.MPESA_CONSUMER_KEY;
     //64 base encoding
